@@ -46,10 +46,10 @@ export const gift = {
     },
   ],
   letter: {
-    title: 'Happy birthday, my love!',
+    title: 'Happy birthday baby!',
     paragraphs: [
       'I wanted to give you something you could play and enjoy a little bit. I feel like I put a lot of effort into my work, and I wanted to put that same work and talent to show some appreciation for you, and how much I love you baby!',
-      'I love you. Today, tomorrow, and through every season.',
+      'I love you so so so much, even more than a busy beaver ;)',
     ],
     signature: 'Hamza',
   },
