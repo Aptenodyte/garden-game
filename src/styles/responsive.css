@@ -1,0 +1,56 @@
+@container app (inline-size > 800px) {
+  .board-frame { inline-size: min(100%, 610px, max(340px, calc(100dvh - 270px))); }
+}
+
+@container app (inline-size < 800px) {
+  .title-screen { grid-template-columns: 1fr; min-block-size: auto; padding-block-start: 2rem; }
+  .title-copy { max-inline-size: 38rem; }
+  .title-visual { inline-size: min(100%, 520px); margin-inline: auto; }
+  .game-layout { grid-template-columns: 1fr; }
+  .game-panel { inline-size: min(100%, 610px); margin-inline: auto; }
+  .game-message { min-block-size: 0; }
+}
+
+@container app (inline-size < 540px) {
+  .site-header { padding-inline: max(.75rem, env(safe-area-inset-left)) max(.75rem, env(safe-area-inset-right)); }
+  .screen { padding-inline: max(.75rem, env(safe-area-inset-left)) max(.75rem, env(safe-area-inset-right)); }
+  .sound-label { display: none; }
+  .frame-leaf { display: none; }
+  .title-screen { padding-block-start: 1.25rem; }
+  .title-actions, .title-actions .button { inline-size: 100%; }
+  .hero-caption { margin-block-start: 0; }
+  .game-heading { align-items: flex-start; }
+  .game-heading .button { padding-inline: .85rem; font-size: .78rem; }
+  .level-card { grid-template-columns: 1fr; padding: 1.25rem; }
+  .level-card-actions { flex-direction: row; align-items: center; justify-content: flex-start; }
+  .path-stop { padding-inline-start: 62px; }
+  .level-path::before { inset-inline-start: 22px; }
+  .level-number { inline-size: 45px; block-size: 45px; }
+  .letter-banner { align-items: flex-start; flex-direction: column; }
+  .keepsake-card, .letter-card { padding-inline: 1.5rem; }
+}
+
+@container app (inline-size < 360px) {
+  .brand-button > span { display: none; }
+  .screen { padding-inline: max(.5rem, env(safe-area-inset-left)) max(.5rem, env(safe-area-inset-right)); }
+  .game-heading { flex-direction: column; }
+}
+
+@media (pointer: coarse) {
+  button, summary, .icon-button { min-block-size: 44px; min-inline-size: 44px; }
+  .board { gap: 2px; }
+  .board-frame { padding: 4px; }
+  .tile { min-inline-size: 44px; min-block-size: 44px; }
+  .text-button { padding-block: .65rem; }
+}
+
+@media (forced-colors: active) {
+  body::before, .frame-leaf { display: none; }
+  .button--primary, .tile, .level-card, .game-panel, .board-frame, .gift-dialog { border-color: ButtonText; }
+  .button--primary { background: ButtonFace; color: ButtonText; }
+  .tile--hinted { outline: 3px solid Highlight; }
+  .tile--hinted::after { background: Highlight; box-shadow: none; }
+  .tile--bloomed::before { content: "✓"; position: absolute; z-index: 7; inset-block-start: 2px; inset-inline-start: 4px; color: CanvasText; }
+  .map-progress span { background: Highlight; }
+  :where(button, a, summary, [tabindex]):focus-visible { outline-color: Highlight; }
+}

@@ -1,0 +1,33 @@
+@keyframes player-arrive {
+  from { opacity: .4; transform: translateY(7px) scale(.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes flower-open {
+  from { opacity: .3; transform: scale(.25) rotate(-25deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+@keyframes dialog-enter {
+  from { opacity: 0; transform: translateY(16px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes hint-glow {
+  50% { opacity: .35; transform: scale(.94); }
+}
+@keyframes petal-fall {
+  0% { opacity: 0; transform: translate3d(0, -15px, 0) rotate(0); }
+  12% { opacity: .9; }
+  100% { opacity: 0; transform: translate3d(var(--petal-drift), 680px, 0) rotate(300deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button, .text-button, .icon-button, .control-button, .tile {
+    transition: translate 150ms ease-out, scale 150ms ease-out, background-color 150ms ease-out, border-color 150ms ease-out;
+  }
+  .button:hover, .control-button:hover { translate: 0 -2px; }
+  .button:active, .control-button:active, .tile:active { scale: .96; }
+  .player-art--arrived { animation: player-arrive 220ms ease-out both; }
+  .flower-art--fresh .flower-petals { transform-box: fill-box; transform-origin: center; animation: flower-open 450ms ease-out both; }
+  .gift-dialog[open] { animation: dialog-enter 240ms ease-out both; }
+  .hint-ring { animation: hint-glow 900ms ease-in-out 3; }
+  .petal { display: block; animation: petal-fall 3.1s ease-in var(--petal-delay) both; }
+}

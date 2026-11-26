@@ -1,0 +1,35 @@
+.gift-dialog {
+  inline-size: min(560px, calc(100% - 28px));
+  max-block-size: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--gold);
+  border-radius: 26px;
+  background: var(--panel);
+  color: var(--cream);
+  box-shadow: 0 30px 100px rgb(4 2 12 / .65);
+}
+.gift-dialog::backdrop { background: rgb(10 7 20 / .78); backdrop-filter: blur(6px); }
+.keepsake-card, .letter-card { position: relative; padding: clamp(2.2rem, 7vw, 3.8rem); text-align: center; }
+.dialog-close { position: absolute; z-index: 4; inset-block-start: 10px; inset-inline-end: 10px; }
+.keepsake-flower { display: grid; place-items: center; inline-size: 86px; block-size: 86px; margin: 0 auto 1.2rem; border: 1px solid var(--border); border-radius: 50%; background: rgb(237 164 182 / .07); }
+.keepsake-flower .brand-art { inline-size: 65px; block-size: 65px; }
+.keepsake-card h2 { font-size: clamp(2rem, 5vw, 2.8rem); }
+.keepsake-text { color: #e4d7e3; font-family: var(--display); font-size: 1.08rem; line-height: 1.75; }
+.completion-stats { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .4rem; margin-block: 1.5rem; color: var(--sage); font-size: .78rem; }
+.dialog-actions { display: flex; flex-direction: column; align-items: center; gap: .7rem; margin-block-start: 1.7rem; }
+.gift-dialog--letter { inline-size: min(670px, calc(100% - 28px)); border-color: #e5bd81; background: #fff4df; color: #42313f; color-scheme: light; }
+.letter-card { z-index: 1; }
+.letter-card h2 { color: #493140; font-size: clamp(2.2rem, 6vw, 3.4rem); }
+.letter-card .eyebrow { color: #794c43; }
+.letter-card .text-button { color: #493140; }
+.letter-seal { display: grid; place-items: center; inline-size: 62px; block-size: 62px; margin: 0 auto 1.5rem; border-radius: 50%; background: #a64f65; color: #fff4df; }
+.letter-seal .icon { inline-size: 27px; block-size: 27px; }
+.letter-body { font-family: var(--display); font-size: 1.02rem; line-height: 1.8; text-align: start; }
+.letter-body p { margin-block-end: 1.1rem; }
+.letter-signature { margin-block-start: 1.6rem; color: #87485c; font-family: var(--display); font-size: 1.55rem; font-style: italic; text-align: end; }
+.petals { position: absolute; z-index: 3; inset: 0; overflow: hidden; pointer-events: none; }
+.petal { display: none; position: absolute; inset-block-start: -20px; inset-inline-start: var(--petal-x); inline-size: 12px; block-size: 18px; border-radius: 90% 0 90% 0; background: #d98e9f; }
+.petal:nth-child(3n) { background: #e8bd73; }
+.petal:nth-child(3n + 1) { background: #b18bc0; }

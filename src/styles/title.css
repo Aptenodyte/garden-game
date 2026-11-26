@@ -1,0 +1,22 @@
+.title-screen {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(340px, 1.1fr);
+  align-items: center;
+  gap: clamp(1rem, 5vw, 5rem);
+  min-block-size: calc(100dvh - 90px);
+}
+.title-copy { position: relative; z-index: 1; max-inline-size: 34rem; }
+.title-copy h1 { margin-block-end: 1.1rem; }
+.title-dedication { color: var(--rose); font-family: var(--display); font-size: 1.25rem; font-style: italic; }
+.title-intro { max-inline-size: 30rem; margin-block: 1.5rem 2rem; color: var(--muted); font-size: 1.05rem; }
+.title-actions { display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; }
+.title-actions .button--primary { min-block-size: 54px; padding-inline: 1.5rem; }
+.title-visual {
+  position: relative;
+  min-inline-size: 0;
+  border-radius: 50% 50% 12% 12%;
+  background: radial-gradient(ellipse at center, rgb(118 97 129 / .16), transparent 68%);
+}
+.hero-art { inline-size: 100%; block-size: auto; overflow: visible; }
+.hero-moon { filter: drop-shadow(0 0 28px rgb(248 214 138 / .18)); }
+.hero-caption { margin-block-start: -1rem; color: var(--muted); font-family: var(--display); font-size: .9rem; font-style: italic; text-align: center; }

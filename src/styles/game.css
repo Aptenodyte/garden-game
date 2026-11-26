@@ -1,0 +1,45 @@
+.game-screen { padding-block-start: 1rem; }
+.game-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-block-end: 1.5rem; }
+.game-heading h1 { margin-block-end: .35rem; font-size: clamp(2.1rem, 1.8rem + 1.4vw, 3.1rem); }
+.game-heading p { margin-block-end: 0; }
+.game-heading > div > p:last-child { color: var(--muted); }
+.game-heading .eyebrow { margin-block-end: .45rem; }
+.game-layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; align-items: start; gap: clamp(1.2rem, 3vw, 2.5rem); }
+.puzzle-area { min-inline-size: 0; container: puzzle / inline-size; }
+.board-instructions { max-inline-size: 34rem; margin: 1rem auto 0; color: var(--muted); font-size: .78rem; text-align: center; }
+.game-panel { padding: 1.25rem; border: 1px solid var(--border); border-radius: 22px; background: rgb(41 33 61 / .88); }
+.level-lesson { display: flex; align-items: flex-start; gap: .75rem; padding-block-end: 1rem; border-block-end: 1px solid rgb(118 97 129 / .55); }
+.level-lesson p { margin: 0; color: var(--muted); font-size: .85rem; }
+.lesson-icon { color: var(--gold); }
+.lesson-icon .icon { inline-size: 21px; block-size: 21px; }
+.game-stats { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 1.1rem 0; }
+.game-stats > div { min-inline-size: 0; }
+.game-stats dt { margin-block-end: .2rem; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.game-stats dd { margin: 0; font-family: var(--display); font-size: 1.65rem; }
+.game-stats .stat-note { margin-block-start: .15rem; color: var(--sage); font-family: inherit; font-size: .65rem; line-height: 1.35; }
+.stat-total { color: var(--muted); font-family: inherit; font-size: .72rem; }
+.stat-flower { color: var(--rose); }
+.game-controls { display: grid; grid-template-columns: repeat(3, 1fr); gap: .45rem; }
+.control-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  min-block-size: 65px;
+  padding: .55rem .3rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel-light);
+  font-size: .72rem;
+}
+.control-button:hover { border-color: var(--gold); }
+.control-button--hint { border-color: var(--gold); color: var(--gold); }
+.control-button .icon { inline-size: 20px; block-size: 20px; }
+.game-message { min-block-size: 4.5rem; margin: 1rem 0; padding-inline-start: .8rem; border-inline-start: 2px solid var(--rose); color: var(--cream); font-family: var(--display); font-size: .9rem; font-style: italic; line-height: 1.5; }
+.help-details { border-block-start: 1px solid rgb(118 97 129 / .55); }
+.help-details summary { display: flex; align-items: center; padding-block: .75rem; color: var(--muted); cursor: pointer; font-size: .78rem; }
+.help-details summary::after { content: "+"; margin-inline-start: auto; color: var(--gold); font-size: 1.1rem; }
+.help-details[open] summary::after { content: "−"; }
+.help-details div { padding-block-end: .5rem; }
+.help-details p { margin-block-end: .6rem; color: var(--muted); font-size: .75rem; }

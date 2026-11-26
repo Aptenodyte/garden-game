@@ -1,0 +1,65 @@
+.map-heading { max-inline-size: 42rem; margin-block-end: 2.5rem; }
+.map-heading h1 { margin-block-end: .8rem; font-size: clamp(2.4rem, 1.9rem + 2vw, 3.8rem); }
+.map-heading > p:last-of-type { color: var(--muted); }
+.map-progress { inline-size: min(280px, 100%); block-size: 7px; overflow: hidden; border: 1px solid var(--border); border-radius: 99px; background: var(--panel); }
+.map-progress span { display: block; inline-size: var(--progress); block-size: 100%; background: var(--rose); }
+.level-path { position: relative; max-inline-size: 850px; margin: 0; padding: 0; list-style: none; }
+.level-path::before { content: ""; position: absolute; inset-block: 3rem 3rem; inset-inline-start: 27px; inline-size: 1px; background: var(--border); }
+.path-stop { position: relative; padding-inline-start: 78px; padding-block-end: 1.3rem; }
+.level-number {
+  position: absolute;
+  inset-block-start: 1.7rem;
+  inset-inline-start: 0;
+  display: grid;
+  place-items: center;
+  inline-size: 55px;
+  block-size: 55px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: .95rem;
+}
+.level-number .icon { inline-size: 22px; block-size: 22px; }
+.level-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: rgb(41 33 61 / .82);
+}
+.path-stop--available .level-card { border-color: var(--gold); background: var(--panel); }
+.path-stop--complete .level-number { border-color: var(--rose); color: var(--rose); }
+.path-stop--locked .level-card { background: rgb(41 33 61 / .45); }
+.path-stop--locked .level-card-copy > p, .path-stop--locked h2 { color: var(--muted); }
+.level-card-copy h2 { margin-block-end: .35rem; }
+.level-card-copy > p:not(.level-status) { margin-block-end: .7rem; color: var(--muted); font-size: .9rem; }
+.level-status { margin-block-end: .45rem; color: var(--gold); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.level-card-actions { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: .55rem; }
+.level-card-actions .text-button { font-size: .78rem; }
+.par-badge { display: inline-flex; align-items: center; gap: .35rem; color: var(--gold); font-size: .75rem; }
+.par-badge .icon { inline-size: 1rem; }
+.letter-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-block-end: 2.5rem;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--gold);
+  border-radius: 22px;
+  background: linear-gradient(120deg, rgb(248 214 138 / .1), rgb(237 164 182 / .07));
+}
+.letter-banner h2, .letter-banner p { margin-block-end: 0; }
+.letter-banner .eyebrow { margin-block-end: .4rem; }
+.postscript-heading { position: relative; margin: 2.5rem 0 1.5rem 78px; padding-block-start: 1.5rem; border-block-start: 1px solid var(--border); background: var(--ink); }
+.postscript-heading h2 { margin-block-end: .6rem; font-size: 2rem; }
+.postscript-heading > p:last-child { margin-block-end: 0; color: var(--muted); }
+.path-stop--expert .level-number { border-radius: 15px; color: var(--rose); }
+
+@container app (inline-size < 540px) {
+  .postscript-heading { margin-inline-start: 62px; }
+}

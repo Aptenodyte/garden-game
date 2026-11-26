@@ -1,0 +1,9 @@
+@import './styles/base.css';
+@import './styles/title.css';
+@import './styles/map.css';
+@import './styles/game.css';
+@import './styles/board.css';
+@import './styles/tile-art.css';
+@import './styles/dialog.css';
+@import './styles/responsive.css';
+@import './styles/motion.css';

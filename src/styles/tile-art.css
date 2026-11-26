@@ -1,0 +1,44 @@
+.flower-stem { fill: #7da184; }
+.flower-bud { fill: #a893c1; stroke: #d0bfdf; stroke-width: 1; }
+.bud-fold { fill: none; stroke: #6f577f; stroke-width: 1.5; }
+.flower-petals { fill: #e99bb1; }
+.flower-petals ellipse:nth-child(even) { fill: #f3b4c2; }
+.flower-heart { fill: #f8d68a; }
+.flower-heart-light { fill: #fff4df; }
+.player-glow { fill: #f8d68a; opacity: .14; }
+.player-wing { fill: #e7f0d9; opacity: .85; }
+.player-antenna { fill: none; stroke: #f8d68a; stroke-width: 2; stroke-linecap: round; }
+.player-body { fill: #f1bd62; }
+.player-head { fill: #49353f; }
+.player-eye { fill: #fff4df; }
+.player-smile { fill: none; stroke: #fff4df; stroke-width: 1.3; stroke-linecap: round; }
+.hedge-art { fill: #527a60; }
+.hedge-branches { fill: none; stroke: #9a755f; stroke-width: 3; }
+.hedge-veins { fill: none; stroke: #83a77e; stroke-width: 2; }
+.switch-base { fill: #1c1729; }
+.switch-top { fill: #b79972; stroke: #f8d68a; stroke-width: 2; }
+.switch-gem { fill: #fff4df; }
+.switch-art.is-active .switch-top { fill: #6f9f80; stroke: #b8dfbd; }
+.gate-arch, .gate-step { fill: none; stroke: #c99d7b; stroke-width: 4; stroke-linecap: round; }
+.gate-bars { fill: none; stroke: #d8b9c6; stroke-width: 2.5; }
+.gate-art.is-open .gate-bars { opacity: .15; }
+.gate-art.is-open .gate-arch { stroke: var(--gold); }
+.exit-arch { fill: none; stroke: #d0a17c; stroke-width: 4; }
+.exit-door { fill: #241d31; stroke: #9a755f; stroke-width: 2; }
+.exit-star { fill: #a892b9; }
+.exit-handle { fill: #d0a17c; }
+.exit-art.is-open .exit-door { fill: #5c4b48; stroke: var(--gold); }
+.exit-art.is-open .exit-star { fill: var(--gold); }
+.portal-outer { fill: rgb(160 132 199 / .12); stroke: #b9a2df; stroke-width: 3; }
+.portal-inner { fill: #171426; stroke: var(--gold); stroke-width: 1.5; }
+.portal-stars { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; }
+.stone-rock { fill: #9293a0; stroke: #b8b4bc; stroke-width: 1; }
+.stone-cracks { fill: none; stroke: #4e4c5c; stroke-width: 2; }
+.stone-ripple { fill: none; stroke: #6e9caa; stroke-width: 2; opacity: .35; }
+.stone-art.is-sunk .stone-rock, .stone-art.is-sunk .stone-cracks { opacity: .18; transform: translateY(7px); }
+.stone-art.is-sunk .stone-ripple { opacity: 1; }
+.current-art { transform: rotate(var(--current-rotation)); }
+.current-stem { fill: none; stroke: #86a98c; stroke-width: 3; stroke-linecap: round; }
+.current-arrow { fill: none; stroke: #f8d68a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.current-leaf { fill: #a9cdb0; }
+.tile--current { border-color: #9fbd91; background: #30453f; }
